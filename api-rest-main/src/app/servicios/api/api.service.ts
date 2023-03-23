@@ -8,11 +8,9 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ApiService {
-  loginByusuario(form: LoginI) {
-    throw new Error('Method not implemented.');
-  }
+  
 
-  url:string = 'http://localhost/Marzo-23-2023-Ricardo-Cantillo-2/'
+  url:string = "https://api.solodata.es/";
 
   constructor(private http:HttpClient) { }
 
@@ -20,6 +18,7 @@ export class ApiService {
     let direccion = this.url + "auth";
     return this.http.post<ResponseI>(direccion, form);
   }
+
 
 
 }
